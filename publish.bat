@@ -1,5 +1,5 @@
 
-set PACKAGE=asdf
+set PACKAGE=haha
 set VERSION=1.0.0
 
 mkdir %PACKAGE% 2>NUL
