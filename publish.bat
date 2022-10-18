@@ -1,11 +1,13 @@
 
-cd lol
-tar -cvzf lol.tar.gz test.txt
-git add lol.tar.gz
-git commit lol.tar.gz -m "Update"
+set PACKAGE=asdf
+set VERSION=1.0.0
 
-git tag lol/1.1.0
+mkdir %PACKAGE% 2>NUL
+tar -cvzf %PACKAGE%/%PACKAGE%.tar.gz package/*
+git add %PACKAGE%/%PACKAGE%.tar.gz
+git commit %PACKAGE%/%PACKAGE%.tar.gz -m "Update"
+
+git tag %PACKAGE%/%VERSION%
 
 git push
 git push --tags
-cd ..
